@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ShoppingBag, UserCircle2, Heart, Search, Menu, X } from "lucide-react";
-
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -68,13 +68,19 @@ const Navbar = () => {
                   </div>
 
                   <div className="flex gap-3 p-4">
-                    <button className="bg-teal-600 text-white py-2 rounded-lg w-full font-semibold hover:bg-teal-700 transition">
+                    <Link
+                      to="/login"
+                      className="bg-teal-600 text-white py-3 rounded-lg text-center w-full font-semibold hover:bg-teal-700 transition"
+                    >
                       Log In
-                    </button>
+                    </Link>
 
-                    <button className="border border-gray-300 py-2 rounded-lg w-full font-semibold text-gray-700 hover:bg-gray-100 transition">
+                    <Link
+                      to="/register"
+                      className="border border-gray-300 py-3 rounded-lg text-center w-full font-semibold text-gray-700 hover:bg-gray-100 transition"
+                    >
                       Register
-                    </button>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -161,13 +167,19 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex gap-3 p-5">
-                  <button className="bg-teal-600 text-white py-3 rounded-lg w-full font-semibold hover:bg-teal-700 transition">
+                  <Link
+                    to="/login"
+                    className="bg-teal-600 text-white py-3 rounded-lg text-center w-full font-semibold hover:bg-teal-700 transition"
+                  >
                     Log In
-                  </button>
+                  </Link>
 
-                  <button className="border border-gray-300 py-3 rounded-lg w-full font-semibold text-gray-700 hover:bg-gray-100 transition">
+                  <Link
+                    to="/register"
+                    className="border border-gray-300 py-3 rounded-lg text-center w-full font-semibold text-gray-700 hover:bg-gray-100 transition"
+                  >
                     Register
-                  </button>
+                  </Link>
                 </div>
               </div>
             )}
@@ -190,53 +202,53 @@ const Navbar = () => {
 
       {/* ================= DESKTOP MENU ================= */}
       <div className="hidden lg:flex items-center gap-10 px-20 py-5 border-t border-gray-200 font-medium text-gray-700">
-        <a href="/" className="text-teal-600">
+        <Link to="/" className="text-teal-600">
           Home
-        </a>
+        </Link>
 
-        <a href="/about" className="hover:text-teal-600 transition">
+        <Link to="" className="hover:text-teal-600 transition">
           About
-        </a>
+        </Link>
 
-        <a href="/category" className="hover:text-teal-600 transition">
+        <Link to="" className="hover:text-teal-600 transition">
           Category
-        </a>
+        </Link>
 
-        <a href="/product-details" className="hover:text-teal-600 transition">
+        <Link to="" className="hover:text-teal-600 transition">
           Product Details
-        </a>
+        </Link>
 
-        <a href="/cart" className="hover:text-teal-600 transition">
+        <Link to="" className="hover:text-teal-600 transition">
           Cart
-        </a>
+        </Link>
 
-        <a href="/checkout" className="hover:text-teal-600 transition">
+        <Link to="" className="hover:text-teal-600 transition">
           Checkout
-        </a>
+        </Link>
 
-        <a href="/contact" className="hover:text-teal-600 transition">
+        <Link to="" className="hover:text-teal-600 transition">
           Contact
-        </a>
+        </Link>
       </div>
 
       {/* ================= MOBILE MENU ================= */}
       {showMenu && (
         <div className="lg:hidden flex flex-col gap-5 px-5 py-5 border-t border-gray-200 text-lg font-medium text-gray-700 bg-white">
-          <a href="/" className="text-teal-600">
+          <Link to="" className="text-teal-600">
             Home
-          </a>
+          </Link>
 
-          <a href="/about">About</a>
+          <Link to="" className="hover:text-teal-600">About</Link>
 
-          <a href="/category">Category</a>
+          <Link to="" className="hover:text-teal-600">Category</Link>
 
-          <a href="/product-details">Product Details</a>
+          <Link to="" className="hover:text-teal-600">Product Details</Link>
 
-          <a href="/cart">Cart</a>
+          <Link to="" className="hover:text-teal-600">Cart</Link>
 
-          <a href="/checkout">Checkout</a>
+          <Link to="" className="hover:text-teal-600">Checkout</Link>
 
-          <a href="/contact">Contact</a>
+          <Link to="" className="hover:text-teal-600">Contact</Link>
         </div>
       )}
     </div>
